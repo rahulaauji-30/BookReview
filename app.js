@@ -5,7 +5,6 @@ import pg from "pg";
 
 const app = express();
 const port = 3000;
-const apiKey = "AIzaSyD6QYAns6DJoRUlmXQd-ENE1ho-T0BpeGg"
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public"));
 
