@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs")  %>
+<div class="main-review">
+    <div class="book-header">
+        <img src="https://covers.openlibrary.org/b/isbn/<%=isbn%>.jpg" alt="<%=title%>">
+        <div class="books-review-titles">
+            <h2> <%=title%> </h2>
+            <p>Author:<%=author%></p>
+            <p>Genre:<%=genre%></p>
+            <p>Published: <%= publishedYear %></p>
+            
+            <div class="icons-view">
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+                <span class="material-symbols-outlined">
+                    send
+                </span>
+            </div>
+        </div>
+    </div>
+    <p> <%= review %></p>
+</div>
+
+<%- include("partials/footer.ejs")  %>

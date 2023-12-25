@@ -1,0 +1,180 @@
+/* Basic CSS Styles */
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #bbb;
+}
+
+/* Header styles */
+
+.hero{
+  margin-left: 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e68300;
+}
+
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  background-color: #333;
+  text-align: center;
+  padding: 15px 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Book Grid styles */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.book-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.book-card p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.book-card button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: hsl(36, 100%, 50%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.book-card button:hover {
+  background-color: #e68300;
+}
+
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+
+/* Icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* review-page */
+.main-review{
+  width: 95%;
+  background-color: #fff;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  
+}
+.book-header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.books-review-titles{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.books-review-titles h2{
+  padding: 10px;
+}
+.books-review-titles p{
+  padding: 10px;
+  color: rgb(51, 51, 51);
+}
+
+.books-review-titles span{
+  padding: 10px;
+  color: red;
+  cursor: pointer;
+
+}
+.book-header img{
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+

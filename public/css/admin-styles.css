@@ -1,0 +1,315 @@
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #e68300;
+}
+/* Sidebar styles */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Styles for the search box and button container */
+.search-container {
+  display: flex;
+  max-width: 300px; /* Adjust the width as needed */
+}
+
+/* Styles for the search box */
+.search-box {
+  flex: 1; /* This makes the input take the available space */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px; /* Rounded left corners */
+}
+
+/* Styles for the search button */
+.search-button {
+  padding: 8px 12px;
+  background-color: #ff9900;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-left: none; /* Remove left border to align with search box */
+  border-radius: 0 4px 4px 0; /* Rounded right corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the search button */
+.search-button:hover {
+  background-color: #e68300;
+}
+
+
+/* Main Content styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.post-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.edit-icon,
+.delete-icon {
+  padding: 5px;
+  color: #333;
+  background-color: #ff9900;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+.edit-icon:hover,
+.delete-icon:hover {
+  background-color: #e68300;
+}
+
+
+/* Main Content styles */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.form-section {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"],
+textarea {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 8px 16px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #e68300;
+}
+
+/* ... previous CSS remains unchanged ... */
+
+.approve-posts-section {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.post {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.post h3 {
+  margin-bottom: 5px;
+}
+
+.post-actionss {
+  display: flex;
+  align-items: center;
+}
+
+.approve-icon,
+.reject-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: green; /* Change color according to your design */
+}
+
+.reject-icon {
+  color: red; /* Change color according to your design */
+}
+
+.read-more-btn {
+  padding: 8px 16px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e68300;
+}
+
+
+/* Admin Page CSS Styles */
+/* Basic styles */
+/* ... Add your common styles here ... */
+
+/* Approve Posts section styles */
+.approve-posts-section {
+  padding: 20px;
+}
+
+.post {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.approve-icon,
+.cross-icon {
+  font-size: 1em;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #333;
+}
+
+.approve-icon:hover {
+  color: green;
+}
+
+.cross-icon:hover {
+  color: red;
+}
+
+
+.read-more-btn {
+  padding: 8px 16px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e68300;
+}
+
+
+/* Styling for the genre selector */
+.genre-selector {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px; /* Adjust width as needed */
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Style when hovering over the selector */
+.genre-selector:hover {
+  border-color: #999;
+}
+
+/* Style for selected option */
+.genre-selector option:checked {
+  background-color: #ff9900;
+  color: #fff;
+}
+
+/* Style for dropdown arrow (not universally supported) */
+.genre-selector::-ms-expand {
+  display: none; /* Hide arrow for IE 11 */
+}
+
+.genre-selector::before {
+  content: '\25BC'; /* Unicode for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+}

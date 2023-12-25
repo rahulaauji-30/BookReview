@@ -1,0 +1,37 @@
+<%- include("partials/admin-header.ejs")  %>
+
+<main class="main-content">
+    <section class="form-section">
+      <h2>Add a Book</h2>
+      <form id="addBookForm" action="/addreview" method="post">
+        <label for="bookTitle">Title:</label>
+        <input type="text" id="bookTitle" name="title" required><br>
+
+        <label for="bookAuthor">Author:</label>
+        <input type="text" id="bookAuthor" name="author" required><br>
+
+        <label for="publishedYear">Published Year:</label>
+        <input type="text" id="publishedYear" name="year" class="year-picker" required><br>
+
+        <label for="bookDescription">Description:</label>
+        <textarea id="bookDescription" name="review" required></textarea><br>
+        <select id="genreSelector" class="genre-selector" name="genre">
+          <option value="fantasy">Fantasy</option>
+          <option value="sci-fi">Science Fiction</option>
+          <option value="mystery">Mystery</option>
+          <option value="thriller">Thriller</option>
+          <option value="horror">Horror</option>
+          <option value="historical">Historical</option>
+          <option value="western">Western</option>
+          <option value="inspirational">Inspirational</option>
+          <option value="biography">Biography</option>
+          <option value="autobiography">Autobiography</option>
+        </select>
+        
+        <input type="submit" value="Add Book">
+      </form>
+    </section>
+  </main>
+</div>
+
+<%- include("partials/admin-footer.ejs")  %>

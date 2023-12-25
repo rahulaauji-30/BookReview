@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs")  %>
+<div class="hero">
+    <h1>Welcome to Book Reviews</h1>
+    <p>Discover your next great read</p>
+    <a href="#books" class="cta-btn">Explore Books</a>
+  </div>
+<main id="books">
+  <section class="book-grid">
+    <!-- Book Cards will go here -->
+    <% books.forEach((book)=>{%>
+        <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/<%=book.isbn%>.jpg" alt="<%=book.bookname%>">
+            <h3> <%=book.bookname%> </h3>
+            <p><%=book.authorname%></p>
+                <form action="/review" method="post">
+                    <button name="clickedID" value="<%= book.id %>">Read Reviews</button>
+                </form>
+        </div>
+    <% }) %>
+  </section>
+</main>
+
+<%- include("partials/footer.ejs")  %>
