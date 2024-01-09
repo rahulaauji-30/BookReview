@@ -1,21 +1,31 @@
 <%- include("partials/admin-header.ejs")  %>
 
 <main class="main-content">
-    <section class="posts">
-      <!-- Display added posts here -->
-      <!-- Example Post -->
-      <div class="post">
-        <h2>Book Title</h2>
-        <p>Author: Author Name</p>
-        <p>Description: Book Description Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="post-actions">
-          <i class="fas fa-pen edit-icon"></i>
-          <i class="fas fa-trash-alt delete-icon"></i>
+  <%if(books.length > 0){%>
+    <% books.forEach((book)=>{%>
+      <section class="posts">
+        <div class="post">
+          <h2><%=book.bookname%></h2>
+          <p><%=book.authorname%></p>
+          <p><%=book.review%></p>
+          <div class="post-actions">
+            <form action="/edit" method="post">
+              <button class="fas fa-pen edit-icon" name="edit" value="<%=book.id%>"></button>
+            </form>
+            <form action="/delete" method="post">
+              <button class="fas fa-trash-alt delete-icon" name="delete" value="<%=book.id%>"></button>
+            </form>
+          </div>
+          <form action="/read" method="post">
+            <button class="read-more-btn" name="read" value="<%=book.id%>">Read More</button>
+          </form>
         </div>
-        <button class="read-more-btn">Read More</button>
-      </div>
-      <!-- End of Example Post -->
-    </section>
+        <!-- End of Example Post -->
+      </section>
+    <%}) %>
+    <%}else{%>
+      <h2>No reviews</h2>
+    <%}%>
   </main>
 </div>
 

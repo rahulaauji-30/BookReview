@@ -1,7 +1,6 @@
 <%- include("partials/header.ejs")  %>
 <div class="main-review">
     <div class="book-header">
-        <img src="https://covers.openlibrary.org/b/isbn/<%=isbn%>.jpg" alt="<%=title%>">
         <div class="books-review-titles">
             <h2> <%=title%> </h2>
             <p>Author:<%=author%></p>
@@ -22,6 +21,7 @@
                     send
                 </span>
             </div>
+            <p> <%= review %></p>
         </div>
     </div>
     <p> <%= review %></p>

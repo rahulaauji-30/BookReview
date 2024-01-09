@@ -313,3 +313,7 @@ input[type="submit"]:hover {
   right: 8px;
   transform: translateY(-50%);
 }
+
+button{
+  border: none;
+}

@@ -4,18 +4,31 @@
     <section class="posts">
       <!-- Display added posts here -->
       <!-- Example Post -->
-      <div class="post">
-        <h2>Book Title</h2>
-        <p>Author: Author Name</p>
-        <p>Description: Book Description Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="post-actions">
-            <i class="fas fa-check approve-icon"></i>
-            <span class="cross-icon-container">
-              <i class="fas fa-times cross-icon"></i>
-            </span>
-        </div>
-        <button class="read-more-btn">Read More</button>
-      </div>
+      <%if(books.length > 0){%>
+          <% books.forEach((book)=>{%>
+          <% books.for %>
+            <div class="post">
+              <h2><%= book.title %></h2>
+              <p>Author: <%= book.author %></p>
+              <div class="post-actions">
+                <form action="/approve" method="post">
+                  <button class="fas fa-check approve-icon" name="approve" value="<%=book.id%>"></button>
+                </form>
+                <form action="/disapprove" method="post">
+                  <span class="cross-icon-container">
+                    <button name="disapprove" class="fas fa-times cross-icon" value="<%=book.id%>"></button>
+                  </span>
+                </form>
+              </div>
+              <form action="/read" method="post">
+                <button name="read" class="read-more-btn" value="<%= book.id %>">Read</button>
+              </form>
+            </div>
+
+          <%}) %>
+        <%}else{%>
+          <h2>No Requests</h2>
+        <%}%>
       <!-- End of Example Post -->
     </section>
   </main>

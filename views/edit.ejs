@@ -3,25 +3,25 @@
 <main class="main-content">
     <section class="form-section">
       <h2>Add a Book</h2>
-      <form id="addBookForm" action="/addreview" method="post">
+      <form  action="/update" method="post">
         <label for="bookTitle">Title:</label>
-        <input type="text" id="bookTitle" name="title" required><br>
+        <input type="text" id="bookTitle" name="title" value="<%= title %>"><br>
 
         <label for="bookAuthor">Author:</label>
-        <input type="text" id="bookAuthor" name="author" required><br>
+        <input type="text" id="bookAuthor" name="author" required value="<%= author %>"><br>
 
         <label for="publishedYear">Published Year:</label>
-        <input type="text" id="publishedYear" name="year" class="year-picker" required><br>
+        <input type="text" id="publishedYear" name="year" class="year-picker" required value="<%=publishedYear%>"><br>
 
         <label for="bookDescription">Description:</label>
-        <textarea id="bookDescription" name="review" required></textarea><br>
+        <textarea id="bookDescription" name="review" required>"<%=review%></textarea><br>
         <select id="genreSelector" class="genre-selector" name="genre">
           <% genres.forEach((genre)=>{%>
-            <% console.log(genre); %>
               <option value="<%=genre%>"><%=genre%></option>
           <% }) %>
       </select>
-        <input type="submit" value="Add Book">
+        
+        <button name="id" value="<%= id %>" >Save</button>
       </form>
     </section>
   </main>
